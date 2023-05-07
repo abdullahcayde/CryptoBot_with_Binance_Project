@@ -1,6 +1,7 @@
 # CyrptoBot_with_Binance_Project
 
 Step 1 : Collecting the data
+
         Goal
         - Collecting two types of data through the Binance API using a streaming architecture
         - We can retrieve information on the prices of different markets (BTC-USDT, BTC-ETH, ...).
@@ -16,6 +17,7 @@ Step 1 : Collecting the data
         - JSON file of the data
 
 Step 2 : Data modeling
+
         Goal
         It is a question of choosing the most suitable storage solution.
         - 2 SQL tables, one for historical data and one for streaming data
