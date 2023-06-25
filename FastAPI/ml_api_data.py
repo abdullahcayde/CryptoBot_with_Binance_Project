@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from pmdarima.arima import auto_arima
 import joblib
 
-path = '/Users/macbook/Desktop/projects/Github_Repositories/CryptoBot_with_Binance_Project/data'
+path = 'local_path/data'
 
 df01 = pd.read_csv(f'{path}/All_2017_01_01_to_2023_05_31_daily.csv')
 df = df01.loc[df01.id_asset == 1]

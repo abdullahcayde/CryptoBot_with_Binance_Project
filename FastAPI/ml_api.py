@@ -2,14 +2,9 @@ from fastapi import FastAPI
 from typing import Optional
 import pandas as pd
 import numpy as np
-#import ml_api_data as data
 import datetime
 import joblib
 
-# import data from another py file
-#train_data = data.train_data
-#train_df = data.train_df
-#df_assets = data.df_assets
 
 # Assets dataframe
 df_assets = pd.DataFrame({'id_asset' : [1,2,3],
@@ -57,15 +52,3 @@ def predict(periods : Optional[int] = None):
 
 
 
-# Predict tomorrow price
-@app.get("/api/predict_tomorrow_price")
-def predict_tomorrow_price(days : int = 1):
-    d, p, r, d_plus_1  = arima_predict_tomorrow_price()
-
-    return {
-           "data": {"last_date" : d[0],
-                    "prediction_date" : str(d_plus_1)[8:18],
-                    "prediction_price" :p,
-                    "yesterday_price" : r,
-                    }
-          }
